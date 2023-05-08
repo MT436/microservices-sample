@@ -13,11 +13,11 @@ pipeline {
          
          stage("sonar"){
              steps{
-                       mvn clean verify sonar:sonar \
-                         -Dsonar.projectKey=microservices \
-                         -Dsonar.projectName='microservices' \
-                         -Dsonar.host.url=http://172.31.18.18:9000 \
-                         -Dsonar.token=sqp_4f5bfb7c773a26c072e10d039a498ca5f29c5a79
+                   mvn clean verify sonar:sonar \
+                   -Dsonar.projectKey=microservices \
+                   -Dsonar.projectName='microservices' \
+                   -Dsonar.host.url=http://65.0.68.145:9000 \
+                   -Dsonar.token=sqp_4f5bfb7c773a26c072e10d039a498ca5f29c5a79
              }
          }
           stage('Publish') {
