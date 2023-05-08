@@ -10,7 +10,6 @@ pipeline {
                  sh 'mvn clean package'
              }
          }
-         
          stage("sonar"){
              steps{
                    mvn clean verify sonar:sonar \
